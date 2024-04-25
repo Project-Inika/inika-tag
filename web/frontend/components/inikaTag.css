@@ -1,0 +1,91 @@
+.inikaTagBG {
+   background-color: #F4D7BD; /* Set your desired background color */
+   width: 100%;
+   padding: 20;
+   min-height: 100vh;
+   text-align: center;
+}
+
+
+/* CSS for Nav bar */
+
+
+.TagDemoList div {
+   height: 4px;
+   background-color: #C1AA96;
+   margin: 5px 0;
+   border-radius: 25px;
+   transition: 0.3s;
+}
+
+.TagDemoList {
+   width: 30px;
+   display: block;
+   margin: 1em 0 0 1em;
+
+}
+
+.NavTag {
+   position: absolute;
+}
+.oneDemolistTag {
+   width: 30px;
+}
+.twoDemolistTag {
+   width: 20px;
+}
+.threeDemolistTag {
+   width: 25px;
+}
+.TagDemoList:hover div {
+   width: 30px;
+}
+.dropdown-item1 {
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: 7px;
+   color: black;
+}
+.dropdown-item2 {
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: 7px;
+   color: black;
+}
+.dropdown-item3 {
+   font-weight: bold;
+   font-size: 18px;
+   margin-bottom: 7px;
+   color: black;
+}
+.dropdown-menu {
+   background-color: #C1AA96;
+
+}
+
+/* CSS for Logo */
+
+.TagImage {
+   width: 200px;
+   height: auto; /* 20px spacing between image and chatbot */
+   align-items: center;
+ }
+
+  .TagImageContainer {
+    background-color: transparent;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .tagInput {
+   background-color: transparent;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .TagOutput {
+   background-color: transparent;
+   display: flex;
+   flex-direction: row;
+ }
