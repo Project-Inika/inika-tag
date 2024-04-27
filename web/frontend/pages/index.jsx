@@ -14,11 +14,12 @@ import { useTranslation, Trans } from "react-i18next";
 import { trophyImage } from "../assets";
 
 import { ProductsCard } from "../components";
+import { InikaTag } from "../components/InikaTag";
 
 export default function HomePage() {
   const { t } = useTranslation();
   return (
-    <Page narrowWidth>
+    <Page>
       <TitleBar title={t("HomePage.title")} primaryAction={null} />
       <Layout>
         <Layout.Section>
@@ -85,7 +86,7 @@ export default function HomePage() {
           </Card>
         </Layout.Section>
         <Layout.Section>
-          <ProductsCard />
+          <InikaTag />
         </Layout.Section>
       </Layout>
     </Page>

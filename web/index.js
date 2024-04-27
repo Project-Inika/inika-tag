@@ -46,6 +46,28 @@ app.get("/api/products/count", async (_req, res) => {
   res.status(200).send(countData);
 });
 
+app.get("/api/products/all", async (_req, res) => {
+  const productData = await shopify.api.rest.Product.all({
+    session: res.locals.shopify.session,
+  });
+  res.status(200).send(productData)
+});
+
+app.get("api/collections/8523750965469", async (req, res) => {
+  try {
+    const response = await shopify.api.rest.Collection.find({
+      session: res.locals.shopify.session,
+      id: 8523750965469
+    });
+
+    res.status(200).send(response);
+
+  } catch(err){
+    res.status(500).send(err);
+  }
+})
+
+
 app.post("/api/products", async (_req, res) => {
   let status = 200;
   let error = null;
@@ -59,6 +81,8 @@ app.post("/api/products", async (_req, res) => {
   }
   res.status(status).send({ success: status === 200, error });
 });
+
+
 
 app.use(shopify.cspHeaders());
 app.use(serveStatic(STATIC_PATH, { index: false }));
